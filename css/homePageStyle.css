@@ -9,6 +9,14 @@ body {
   font-family: arial;
 }
 
+.clock {
+  color: #fff;
+  position: relative;
+  margin-left: 20px;
+  width: 300px;
+  bottom: 750px;
+}
+
 .container {
   width: 1000px;
   position: relative;
