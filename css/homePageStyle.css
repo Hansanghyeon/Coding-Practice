@@ -10,11 +10,14 @@ body {
 }
 
 .clock {
+  display: block;
   color: #fff;
-  position: relative;
+  position: absolute;
   margin-left: 20px;
   width: 300px;
-  bottom: 750px;
+  left: ;
+  bottom: 90%;
+  z-index: -1;
 }
 
 .container {

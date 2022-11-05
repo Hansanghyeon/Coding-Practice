@@ -1,3 +1,11 @@
+body {
+  font-size: 24px;
+}
+
+#greeting {
+  font-weight: bold;
+}
+
 img {
   position: absolute;
   width: 100%;
@@ -8,4 +16,14 @@ img {
   bottom: 0px;
   z-index: -1;
   opacity: 80%;
+}
+
+.hidden {
+  display: none;
+}
+
+#logout {
+  position: absolute;
+  top: 1%;
+  right: 1%;
 }

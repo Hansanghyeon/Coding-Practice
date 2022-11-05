@@ -49,10 +49,10 @@ const quotes = [
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
 
-const todaysQuote = quotes[Math.round(Math.random() * quotes.length)];
+const todaysquote = quotes[Math.floor(Math.random() * quotes.length)];
 
-quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+quote.innerText = todaysquote.quote;
+author.innerText = todaysquote.author;
 
 // Math.round() 반올림
 // ceil 숫자를 천장까지 높여줌. 1.1 == 2,  1.0 == 1
