@@ -16,10 +16,11 @@ function saveToDO() {
 }
 
 function removeToDo(event) {
-  const li = event.target.parentElement; // target(클릭된) HTML의 element이다.
-  console.log(li.id);
+  const li = event.target.parentElement; // target(클릭된) HTML의 element이다. string 타입임
   li.remove();
-
+  toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id)); //
+  console.log(li.id);
+  saveToDO();
   //parentElement로 클릭된 element의 부모임, innerText로 해당 텍스트를 추출할 수 있다.
 }
 
