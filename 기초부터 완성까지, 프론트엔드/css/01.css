@@ -1,0 +1,10 @@
+.block {
+  background-color: skyblue;
+  width: 500px;
+}
+
+img {
+  width: 400px;
+  position: relative;
+  left: 30px;
+}
