@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/03.css" />
+  </head>
+  <body>
+    <div id="own">
+      <h2>rect도 shortcut이다!</h2>
+      <canvas></canvas>
+      <p class="block">
+        ctx.moveTo(50, 50); <br />ctx.lineTo(50, 150); ctx.stroke();
+      </p>
+      <h2>moveTo()</h2>
+      <p>포인터를 0,0 기준에서 어디로 이동 시킬지에 대한 값</p>
+      <h2>lineTo()</h2>
+      <p>해당 위치에서 너비, 높이에 대한 값 지정</p>
+      <p>상대적인 값이 아닌 절대값이기에 헷갈리지 않기</p>
+    </div>
+    <div id="two">
+      <canvas></canvas>
+      <p class="block">
+        ctx2.moveTo(50, 50);<br />
+        ctx2.lineTo(50, 100);<br />
+        ctx2.lineTo(100, 100);<br />
+        ctx2.lineTo(100, 50);<br />
+        ctx2.lineTo(50, 50);<br />
+        ctx2.storke();<br /><br />
+        ctx2.rect(50,50,100,100);
+      </p>
+      <p>
+        함수(moveTo)를 이용해 50,50으로 이동, 그 후 ↓ → ↑ ← (반시계) 순으로 라인
+        을 그린다.
+      </p>
+      <footer>
+        궁금증<br />
+        dcoument.querySelector("canvas")와<br />document.querySelector("#own
+        canvas")의 결과 차이는 없지만<br />후자는 rect를 사용 할 수 없다. 왜?
+      </footer>
+    </div>
+    <script src="../javascript/03.js"></script>
+  </body>
+</html>

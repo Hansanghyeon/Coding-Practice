@@ -4,10 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name=""description content=""이 페이지에 대한 두세 문장 정도의 간단한
+    설명">
+
     <link rel="stylesheet" href="../css/01.css" />
     <title>Document</title>
   </head>
   <body>
+    <h1>html 기타 코드</h1>
+    <p>[&lt] == & lt; [&gt] === & gt;</p>
+    <p>한칸 띄우기 [& nbsp], 한 줄 띄우기 &ltbr&gt</p>
+    <hr />
+    <p>추가로 화면에 밑줄을 그리기 &lthr&gt</p>
+    <p>글씨 두껍게 : style:="font-weight:bold"</p>
     <div>block 요소</div>
     <div>
       <div>block 요소 안의 block 요소.</div>
@@ -60,7 +69,7 @@
       위젯 등에 사용됩니다.
     </p>
     <article class="block">
-      <img src="../../img/0.jpeg" alt="" />
+      <img src="../../바닐라JS 크롬 앱 만들기/img/0.jpeg" alt="" />
       <p>[속보] 00구 00동 진도 4.0 지진 발생</p>
       <footer>30분 전 작성...</footer>
     </article>
@@ -104,8 +113,8 @@
         React를 사용하다 보면, render() 함수는 React 엘리먼트 트리를 만드는
         것이다. ' 라는 생각이 드는 순간이 있습니다. state나 props가 갱신되면
         render() 함수는 새로운 React 엘리먼트 트리를 반환합니다. 이때 React는
-        방금 만들어진 트리에 맞게 가장 효과적으로 UI를 갱신하는 ㅂ아법을 알아낼
-        필요학 있습니다.
+        방금 만들어진 트리에 맞게 가장 효과적으로 UI를 갱신하는 방법을 알아낼
+        필요가 있습니다.
       </p>
       <aside>
         render에 대한 설명은
@@ -126,6 +135,105 @@
           <li><a href="./001-3.html">라이브 방송</a></li>
         </ul>
       </nav>
+    </div>
+    <h2><br />meta name="description"을 이용해 페이지 설명을 남기자</h2>
+    <p>
+      &lt;meta name=""description content="" <br />이 페이지에 대한 두세 문장
+      정도의 간단한 설명을 남기자
+    </p>
+    <h2><br />open graph, twitter 태그를 사용해 외부 사용자를 유인하자</h2>
+    <p>
+      op(open-graph) 태그, 페이스북에서 만든 프로토콜 동일한 메타 정보를 쉽게
+      표시하도록 만들어짐.
+    </p>
+    <div class="block">
+      <p>&ltmeta property="og:title" content="페이지 이름"/&gt</p>
+      <p>
+        &ltmeta property="og:description" content= "페이지에 대한 간략한 한두 줄
+        설명"/&gt
+      </p>
+    </div>
+    <!-- CSS -->
+    <h1><br />CSS</h1>
+    <pre class="block">
+
+      선택자(A) {
+         프로퍼티(B): 값(C);
+      }
+
+    </pre>
+
+    <div class="block">
+      <p style="color: white; font-size: 24px">html 자체에서 스타일 변경</p>
+      <p>&ltp style="color: white; font-size: 24px"&gt Text &lt/p&gt</p>
+    </div>
+    <!-- 상속 -->
+    <h2><br />상속</h2>
+    <div style="font-size: 20px; font-weight: bold; color: white" class="block">
+      parent
+      <p>child</p>
+      <p>
+        부모에게 스타일을 적용하면 자식도 효과를 받는 경우, font 관련, 색상,
+        정렬 방식 프로퍼티
+      </p>
+    </div>
+    <div style="border: 1px solid #ccc" class="block">
+      parent
+      <p>child</p>
+      <p>width, height, margin, display, border 프로퍼티</p>
+    </div>
+    <h2>
+      <br />상속되는 프로퍼티지만 HTML 요소의 종류에 따라 상속되지 않기도 한다.
+      &ltbutton&gt 요소가 이에 해당한다.
+    </h2>
+    <div style="font-size: 36px" class="block">
+      parent
+      <button>child</button>
+    </div>
+    <h2>
+      <br />만약 프로퍼티와 요소의 종류에 영향받지 않고 부모 요소의 프로퍼티를
+      상속받고 싶다면 inherit 값을 지정합니다.
+    </h2>
+    <div style="font-size: 36px" class="block">
+      parent
+      <button style="font-size: inherit">child</button>
+    </div>
+
+    <h2>
+      <br />
+      속성 선택자
+    </h2>
+    <p>"요소 이름[속성명(연산자)값]"</p>
+    <div class="block">
+      <p>
+        속성명 : 속성명만 작성할 떄 해당 속성을 갖는 요소를 모두 선택합니다.
+      </p>
+      <p>= : 값이 정확하게 일치할 때 선택합니다.</p>
+      <p>
+        ~= 값이 정확하게 일치할 때 선택합니다. =와 다르게 띄어쓰기로 여러 값이
+        지정된 요소일 때도 찾아서 선택합니다.
+      </p>
+      <p>|= : 값이 일치하거나 값 뒤 -(하이픈)을 작성할 때 또한 선택합니다.</p>
+      <p>^= : 접두사로 값을 가질 때 선택합니다.</p>
+      <p>$= : 접미사로 값을 가질 때 선택합니다.</p>
+      <p>*= : 값이 포함된 모든 요소를 선택합니다.</p>
+      <pre><br>&lthead&gt
+  &ltstyle&gt;
+   / * id 속성을 갖는 span 요소에 스타일 지정 */
+    span[id] {
+      color: skyblue;
+    }
+  
+  /* href 속성이 htpps://example.com인 a요소에 스타일 지정 */
+  a[href="https://example.com]
+  {
+    color: red;
+  }
+
+  /* 클래스로 class1을 갖는 span 요소 선택 */
+  span[class~="class1"] {
+    color: blue;
+    }</pre>
     </div>
   </body>
 </html>
